@@ -5,29 +5,47 @@ import os
 from datetime import datetime
 
 def run(user_prompt: str):
-    print("------------------------------------------------")
+    print("\n" + "="*50)
     print("[CORE] Orchestrator Initialized")
     
-    # 1. Get Intelligent Parameters
-    simulation_config = parse_prompt(user_prompt)
+    # 1. Get AI Response
+    sim_config = parse_prompt(user_prompt)
 
-    # 2. Prepare Output Directory
-    output_dir = "outputs"
-    os.makedirs(output_dir, exist_ok=True)
+    # 2. Safe Extraction (Uses .get to avoid KeyError)
+    context = sim_config.get("context_analysis", {})
+    subject = context.get("subject_identified", "general_simulation")
+    domain = context.get("physics_domain", "Unknown")
     
-    # 3. Generate Filename
-    # We include the subject in the filename for easier sorting
-    subject = simulation_config.get("subject", "general").replace(" ", "_")
+    # 3. Create Output Directory and Filename
+    os.makedirs("outputs", exist_ok=True)
+    clean_subject = str(subject).lower().replace(" ", "_")
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-    filename = f"{output_dir}/sim_{subject}_{timestamp}.json"
-
-    # 4. Save Configuration
+    filename = f"outputs/sim_{clean_subject}_{timestamp}.json"
+    
     with open(filename, "w") as f:
-        json.dump(simulation_config, f, indent=2)
+        json.dump(sim_config, f, indent=2)
 
-    print("------------------------------------------------")
-    print(f"[CORE] Configuration Generated: {filename}")
-    print(f"[CORE] Subject: {simulation_config.get('subject')}")
-    print(f"[CORE] Velocity: {simulation_config['physics']['velocity_inlet']['value']} {simulation_config['physics']['velocity_inlet']['unit']}")
-    print(f"[CORE] Solver: {simulation_config['solver_settings']['turbulence_model']}")
-    print("------------------------------------------------")
+    # 4. Smart Console Summary (Prints only what is relevant)
+    print("-" * 50)
+    print(f"[CORE] Configuration Saved: {filename}")
+    print(f"[CORE] Subject Identified: {subject}")
+    print(f"[CORE] Domain Detected: {domain}")
+
+    # Display relevant parameters based on domain
+    bc = sim_config.get("boundary_conditions", {})
+    inlet = bc.get("inlet", {})
+
+    if domain in ["CFD", "CHT"]:
+        vel = inlet.get("velocity", {}).get("value", "N/A")
+        unit = inlet.get("velocity", {}).get("unit", "m/s")
+        print(f"[CORE] Flow Velocity: {vel} {unit}")
+
+    if domain in ["Thermal", "CHT", "Structural"]:
+        temp = inlet.get("temperature", {}).get("value", "N/A")
+        print(f"[CORE] Target Temperature: {temp} K")
+
+    if "Structural" in domain:
+        print(f"[CORE] Analysis Type: Thermal Stress / Deformation")
+
+    print(f"[CORE] AI Reasoning: {sim_config.get('inference_reasoning', 'Logic applied.')}")
+    print("="*50 + "\n")

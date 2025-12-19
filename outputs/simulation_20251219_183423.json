@@ -1,8 +1,0 @@
-{
-  "intent": "cfd",
-  "simulation_type": "external_flow",
-  "velocity": 50,
-  "velocity_unit": "m/s",
-  "medium": "air",
-  "solver": "steady"
-}
