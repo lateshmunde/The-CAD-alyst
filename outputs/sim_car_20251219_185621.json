@@ -1,0 +1,25 @@
+{
+  "subject": "car",
+  "intent": "cfd",
+  "physics": {
+    "velocity_inlet": {
+      "value": 40.0,
+      "unit": "m/s",
+      "condition_type": "inferred_high"
+    },
+    "temperature": {
+      "value": 300.0,
+      "unit": "K"
+    },
+    "pressure": {
+      "value": 101325.0,
+      "unit": "Pa"
+    }
+  },
+  "solver_settings": {
+    "time_domain": "steady",
+    "turbulence_model": "k-omega-sst",
+    "iterations": 1000
+  },
+  "reasoning": "Assumed 40m/s because user specified high-speed wind conditions for a normal vehicle"
+}
