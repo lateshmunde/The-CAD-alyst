@@ -28,6 +28,7 @@ Your goal is to parse natural language into valid solver parameters.
     "includes_phase_change": boolean
   },
   "materials": {
+    "fluid": { "name": "string" },
     "solid": { "name": "string", "thermal_conductivity": float },
     "pcm": { "melting_point_k": float, "latent_heat_kj_kg": float }
   },
