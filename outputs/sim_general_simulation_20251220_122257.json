@@ -1,0 +1,25 @@
+{
+  "subject": "unknown_vehicle",
+  "intent": "cfd",
+  "physics": {
+    "velocity_inlet": {
+      "value": 20,
+      "unit": "m/s",
+      "condition_type": "default"
+    },
+    "temperature": {
+      "value": 300,
+      "unit": "K"
+    },
+    "pressure": {
+      "value": 101325,
+      "unit": "Pa"
+    }
+  },
+  "solver_settings": {
+    "time_domain": "steady",
+    "turbulence_model": "k-epsilon",
+    "iterations": 500
+  },
+  "reasoning": "System failure fallback"
+}

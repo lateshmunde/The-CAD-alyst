@@ -1,0 +1,39 @@
+{
+  "context_analysis": {
+    "physics_domain": "Thermal",
+    "subject_identified": "Heatsink component",
+    "includes_phase_change": false
+  },
+  "materials": {
+    "solid": {
+      "name": "Aluminum",
+      "thermal_conductivity": 237.0
+    }
+  },
+  "boundary_conditions": {
+    "base": {
+      "temperature": {
+        "value": 373.15,
+        "unit": "K"
+      }
+    },
+    "fins": {
+      "convection": {
+        "heat_transfer_coefficient": {
+          "value": 25.0,
+          "unit": "W/m^2K"
+        },
+        "ambient_temperature": {
+          "value": 300.15,
+          "unit": "K"
+        }
+      }
+    }
+  },
+  "solver_settings": {
+    "time_stepping": "steady_state",
+    "energy_equation": true,
+    "thermal_stress_enabled": false
+  },
+  "inference_reasoning": "Assuming Aluminum for heatsink material due to its high thermal conductivity. Using given boundary conditions for base and fins."
+}

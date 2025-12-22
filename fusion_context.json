@@ -1,0 +1,10 @@
+{
+  "prompt": "Cube",
+  "entities": [
+    {
+      "name": "Cube_Body",
+      "parent": "Heatsink:1",
+      "token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/32PwQ0CMQwEW0kDlny2EycNXAn848RphTp4UQIt8IEnDSBRAQVc7vijlb0rayRrMeSAU0ugOUeiPNMSZL+kcHpe10dZv7fzRd+f++sgOQUbLhmFQaaDaB9Q2QqMLiMbRRvcJztJqe5NSwWmRCAFB2SMEYytUS+JPPb/vyRrRlsYekMFad2hRlPQyk6o5lJ/LfadJG4Go/e81QAAAA=="
+    }
+  ]
+}

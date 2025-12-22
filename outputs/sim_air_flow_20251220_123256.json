@@ -1,0 +1,31 @@
+{
+  "context_analysis": {
+    "physics_domain": "CFD",
+    "subject_identified": "Air flow",
+    "includes_phase_change": false
+  },
+  "materials": {
+    "solid": {
+      "name": "Air",
+      "thermal_conductivity": 0.025
+    }
+  },
+  "boundary_conditions": {
+    "inlet": {
+      "velocity": {
+        "value": 25,
+        "unit": "m/s"
+      },
+      "temperature": {
+        "value": 293.15,
+        "unit": "K"
+      }
+    }
+  },
+  "solver_settings": {
+    "time_stepping": "steady_state",
+    "energy_equation": true,
+    "thermal_stress_enabled": false
+  },
+  "inference_reasoning": "Assuming air thermal conductivity and steady state simulation. Inlet temperature assumed as 20\u00b0C (293.15 K) as it was not specified."
+}
