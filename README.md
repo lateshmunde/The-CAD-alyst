@@ -1,26 +1,11 @@
-The-CAD-alyst
-├── ai
-│   ├── prompts.py
-│   ├── prompt_parser.py
-│   └── core
-│       ├── orchestrator.py
-│       ├── limits
-│       │   └── physical_limits.py
-│       ├── normalizers
-│       │   └── units.py
-│       └── validators
-├── fusion
-│   ├── adapter.py
-│   ├── fusion_client.py
-│   └── cfd
-│       ├── setup.py
-│       ├── cht_setup.py
-│       └── thermal_setup.py
-├── api
-│   ├── boundary_setup.py
-│   └── simulation_runner.py
-├── app.py
-└── debug_gemini.py
+The-CAD-alyst |── ai |── prompts.py |── prompt_parser.py |── core |── orchestrator.py<br>
+| | |── limits | |── physical_limits.py<br>
+| | |── normalizers | |── units.py<br>
+| | |── validators<br>
+|── fusion |── adapter.py |── fusion_client.py<br>
+| |── cfd |── setup.py |── cht_setup.py |── thermal_setup.py<br>
+| | |── api |── boundary_setup.py |── simulation_runner.py<br>
+|── app.py |── debug_gemini.py<br>
 
 
 # Branch - BoundarySetup
