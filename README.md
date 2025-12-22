@@ -91,6 +91,7 @@ Fusion Boundary Dispatcher
 ## 🖥️ Usage and Setup
 
 Supported through Command Line only. 
+Give following commands sequentially to run in your local system with GroqAPI key in .env (Visit site -  "https://console.groq.com/home" )
 
 1. **`python -m venv venv`**
    Creates a new isolated Python virtual environment named `venv`.
