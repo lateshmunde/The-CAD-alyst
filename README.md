@@ -1,31 +1,24 @@
 The-CAD-alyst
-│
 ├── ai
 │   ├── prompts.py
-│   └── prompt_parser.py
-│
-├── core
-│   ├── orchestrator.py
-│   │
-│   ├── limits
-│   │   └── physical_limits.py
-│   │
-│   ├── normalizers
-│   │   └── units.py
-│   │
-│   └── validators
-│
+│   ├── prompt_parser.py
+│   └── core
+│       ├── orchestrator.py
+│       ├── limits
+│       │   └── physical_limits.py
+│       ├── normalizers
+│       │   └── units.py
+│       └── validators
 ├── fusion
 │   ├── adapter.py
 │   ├── fusion_client.py
-│   ├── cfd_setup.py
-│   ├── cht_setup.py
-│   ├── thermal_setup.py
-│   │
-│   └── api
-│       ├── boundary_setup.py
-│       └── simulation_runner.py
-│
+│   └── cfd
+│       ├── setup.py
+│       ├── cht_setup.py
+│       └── thermal_setup.py
+├── api
+│   ├── boundary_setup.py
+│   └── simulation_runner.py
 ├── app.py
 └── debug_gemini.py
 
