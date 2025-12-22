@@ -1,0 +1,21 @@
+External Aerodynamics (CFD)
+Simulate wind flow at 120 m/s over a sports car
+Study cross-wind effects of 30 m/s on a bus
+ 
+Aerospace / High-Speed Flow
+Simulate airflow at 250 m/s over an aircraft wing
+Study airflow at Mach 0.6 over a blunt nose cone
+ 
+Internal Flow (Inlet / Outlet based)
+Simulate air entering a duct at 25 m/s
+Analyze pressure drop in a cooling channel with airflow of 5 m/s
+ 
+Thermal + Flow (still PoC-friendly)
+Simulate hot air flow at 60 m/s and 350 K over a heat sink
+Analyze cooling airflow of 15 m/s around an electronic enclosure
+Test forced convection at 10 m/s over a heated plate
+ 
+Simple Educational 
+Test laminar airflow at 2 m/s in a rectangular channel
+Simulate turbulent airflow at 40 m/s in a circular pipe
+Compare airflow at 10 m/s vs 30 m/s around a cylinder
