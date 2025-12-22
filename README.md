@@ -30,10 +30,6 @@ The-CAD-alyst
 └── debug_gemini.py
 
 
-
-
-
-````md
 # Branch - BoundarySetup
 
 CADalyst BoundarySetup – Fusion 360 AI-Driven Simulation Boundary Automation
