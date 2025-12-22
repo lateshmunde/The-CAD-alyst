@@ -26,3 +26,8 @@ The-CAD-alyst<br>
 ├── app.py<br>
 └── debug_gemini.py<br>
 
+.env file
+GROQ_API_KEY=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
+
+
+
