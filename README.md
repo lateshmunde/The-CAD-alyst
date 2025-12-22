@@ -79,10 +79,7 @@ Normalized CFD Config
 Validation & Physical Limits
         ↓
 Fusion Boundary Dispatcher
-        ↓
-Named Face Mapping
-        ↓
-Boundary Conditions Applied
+
 ````
 
 ---
